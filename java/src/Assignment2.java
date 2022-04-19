@@ -91,7 +91,7 @@ class SumProductDivide {
         int b = input.nextInt();
         int sum = a+b;
         int product = a*b;
-        int division = product/sum;
+        double division = (double) sum/product;
 
         System.out.println("Sum: "+sum);
         System.out.println("Product: "+product);
