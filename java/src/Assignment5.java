@@ -71,6 +71,46 @@ class A5Question5 {
     }
 }
 
+class A5Question6 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the character ");
+        char char1;
+        char1 = input.next().charAt(0);
+        switch (char1) {
+            case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' -> System.out.println("The character is an alphabet.");
+            default -> System.out.println("The character is not an alphabet.");
+        }
+    }
+}
+
+class A5Question7 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter the character ");
+        char char1;
+        char1 = input.next().charAt(0);
+        switch (char1) {
+            case 'a', 'e', 'i', 'o', 'u' -> System.out.println("The alphabet is a vowel.");
+            default -> System.out.println("The alphabet is a consonant.");
+        }
+    }
+}
+
+class A5Question8 {
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        System.out.println("Enter the character ");
+        char char1 ;
+        char1= input.next().charAt(0);
+        switch (char1) {
+            case '0', '1', '2', '3', '4', '5', '6', '7', '8', '9' -> System.out.println("The character is a digit.");
+            case 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z' -> System.out.println("The character is an alphabet.");
+            default -> System.out.println("The character is a special character");
+        }
+    }
+}
+
 class A5Question10 {
     public static void main(String[] args) {
         Scanner input=new Scanner(System.in);
@@ -101,6 +141,24 @@ class A5Question11 {
             case 4,6,9,11 -> System.out.println("No. of Days: 30");
             case 2 -> System.out.println("No. of Days: 28");
             default -> System.out.println("Invalid Number!");
+        }
+    }
+}
+
+class A5Question13 {
+    public static void main(String[] args) {
+        Scanner input= new Scanner(System.in);
+        int a1,a2,a3,sum;
+        System.out.print("Enter the angle ");
+        a1 = input.nextInt();
+        System.out.print("Enter the angle ");
+        a2 = input.nextInt();
+        System.out.print("Enter the angle ");
+        a3 = input.nextInt();
+        sum=a1+a2+a3;
+        switch (sum) {
+            case 180 -> System.out.println("The triangle is valid.");
+            default -> System.out.println("The triangle is not valid.");
         }
     }
 }
@@ -173,5 +231,21 @@ class A5Question22 {
         System.out.print("Enter a number: ");
         int num = input.nextInt();
         System.out.println(-num);
+    }
+}
+
+class A5Question24 {
+    public static void main(String[] args) {
+        Scanner demo= new Scanner(System.in);
+        int num,x;
+        System.out.print("Enter the number ");
+        num= demo.nextInt();
+        x= num%2;
+        switch (x) {
+            case 0 -> num += 1;
+            default -> {
+            }
+        }
+        System.out.println(num);
     }
 }
