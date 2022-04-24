@@ -133,12 +133,12 @@ class Question9 {
         boolean result = Character.isDigit(str);
         boolean result2 = Character.isAlphabetic(str);
         if(result) {
-            System.out.println("'"+ str+"' is a number");
+            System.out.println("'"+ str +"' is a number");
         }
         else if (result2) {
-            System.out.println("'"+ str+"' is a letter");
+            System.out.println("'"+ str +"' is a letter");
         } else {
-            System.out.println("'"+ str+"' is a special character");
+            System.out.println("'"+ str +"' is a special character");
         }
     }
 }
@@ -150,10 +150,10 @@ class Question10 {
         char str = input.next().charAt(0);
         boolean result = Character.isUpperCase(str);
         if(result) {
-            System.out.println("'"+ str+"' is uppercase");
+            System.out.println("'"+ str +"' is uppercase");
         }
         else {
-            System.out.println("'"+ str+"' is lowercase");
+            System.out.println("'"+ str +"' is lowercase");
         }
     }
 }
@@ -200,9 +200,29 @@ class Question12 {
         } else if (month==4||month==6||month==9||month==11) {
             System.out.println("No. of Days: 30");
         } else if (month==2) {
-            System.out.println("No. of Days: 28");
+            System.out.println("Enter Year: ");
+            int year = input.nextInt();
+            if ((year%4==0&&year%100!=0)||year%400==0) {
+                System.out.println("No. of Days: 29");
+            } else {
+                System.out.println("No. of Days: 28");
+            }
         } else {
             System.out.println("Invalid month number!");
+        }
+    }
+}
+
+class Question13 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter amount: ");
+        int money = input.nextInt();
+        if (money%5==0) {
+            int amount = money/5;
+            System.out.println("No. of 5 rupee notes: "+amount);
+        } else {
+            System.out.println("Invalid amount for 5 rupee note.");
         }
     }
 }
@@ -235,7 +255,7 @@ class Question15 {
         System.out.println("Enter third side of triangle: ");
         int side3 = input.nextInt();
 
-        if (side1+side2>=side3&&side1-side2<=side3) {
+        if (side1+side2>=side3 && side3+side2>=side1 && side1+side3>=side2) {
             System.out.println("Triangle is valid.");
         } else {
             System.out.println("Triangle is invalid.");
@@ -274,10 +294,10 @@ class Question17 {
         int c = input.nextInt();
         double d = (b * b) - (4 * a * c);
 
-        if (d>0) {
+        if (d>=0) {
             double e = Math.sqrt(d);
-            double root1 = (d - b) / (2 * a);
-            double root2 = -(b + d) / (2 * a);
+            double root1 = (e - b) / (2 * a);
+            double root2 = -(b + e) / (2 * a);
 
             System.out.println("Solution 1: " + root1 + "\nSolution 2: " + root2);
         } else {
@@ -380,7 +400,7 @@ class Question21 {
         } else if (units<=250) {
             price=25+75+(units-150)*1.2;
         } else {
-            price=25+75+180+(units-250)*1.5;
+            price=25+75+120+(units-250)*1.5;
         }
         double total=price+0.2*price;
         System.out.println("Total price: "+total);
